@@ -1,2 +1,2 @@
 # ImageProcessing
-The image processing project using C and C++. Various operations like cropping, applying filters, rotating, merging two images etc.
+The image processing project using C and C++. Various operations like cropping, applying filters, rotating, merging two images etc.Required 2 months to complete the project.
