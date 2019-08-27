@@ -1,0 +1,49 @@
+ 
+Here's a simple pipeline:
+
+PNMreader
+|
+Shrinker
+|
+PNMwriter
+
+ 
+
+This pipeline should read an image, shrink it, and write it out.
+ 
+
+PNMreader reader("input.pnm");
+Image *image1 = reader.GetOutput();
+Shrinker shrinker;
+shrinker.SetInput(image1);
+Image *image2 = shrinker.GetOutput()
+PNMwriter writer;
+writer.SetInput(image2);
+image2->Update();
+writer.Write("output.pnm");
+
+ 
+
+image2 is requested to be up-to-date.
+The way image2 becomes up-to-date is to request its Source to do an "Update".
+(BIG HINT: Image and Source *both* need an Update method)
+Therefore image2 asks its Source to update.  The source for image2 is
+shrinker.
+When shrinker is asked to update, this means that it wants to execute, so
+that it can create the correct image within the image2 object.
+BUT: shrinker cannot execute yet!
+BECAUSE: shrinker's input, which is image1, is not up-to-date.
+SO: shrinker tells image1 to get up-to-date.
+By similar logic, image1 tells reader that it needs to be up-to-date.
+Reader is different than shrinker.  (What does this mean for implementation?
+Reader has no inputs.  So when reader is asked to get up-to-date,
+it can just do it.  Therefore, reader reads the file, and places the image
+in the image1 object.
+reader is now up-to-date.
+image1 is now up-to-date.
+So, since image1 is up-to-date, shrinker can now execute.
+And you already have an execute method.
+Then image2 is up-to-date.
+This satisfies the initial request ... image2->Update();
+
+ 
