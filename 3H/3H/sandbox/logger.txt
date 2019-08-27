@@ -1,0 +1,3 @@
+Entered program from hank1
+PNMreader: about to execute 
+PNMreader: done executing 

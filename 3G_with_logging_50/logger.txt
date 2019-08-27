@@ -1,0 +1,9 @@
+Entered program from 3B_input.pnm
+LRConcat: about to update input1
+LRConcat: about to update input1
+LRConcat: about to update input1
+LRConcat: about to update input1
+LRConcat: about to update input1
+LRConcat: about to update input1
+PNMreader: about to execute 
+Throwing Exception: (PNMreader): PNMreader: input file is empty!
