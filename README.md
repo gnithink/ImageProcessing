@@ -41,3 +41,19 @@ To test the project with an input test image named "3A_input.pnm". We can see th
 ./Proj3A 3B_input.pnm 3E_output.pnm
 ```
 
+```
+Commands to run 3H: (All the source code has been transferred to the directory named sandbox)
+
+Different folders are stress tests, testing the source code for different edge cases.
+Each stress_test can be run individually with the command:
+```
+./run_one test_name
+eg: ./run_one hank1
+```
+All the 85 test cases can be run together with the command
+```
+./run_all
+```
+This is a tricky project requiring significant amount of patience and discipline to solve.
+
+
