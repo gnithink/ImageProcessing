@@ -51,9 +51,11 @@ Each stress_test can be run individually with the command:
 eg: ./run_one hank1
 ```
 All the 85 test cases can be run together with the command
+
 ```
 ./run_all
 ```
+
 This is a tricky project requiring significant amount of patience and discipline to solve.
 
 
