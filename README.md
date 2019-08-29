@@ -33,15 +33,16 @@ To test the project with an input test image named "3A_input.pnm". We can see th
 ```
 Commands to run 3E: (Data flow network design without the need to call the execute method)
 To build the project:
+
 ```
 make
 ```
+
 To test the project with an input test image named "3A_input.pnm". We can see the output image created in the file "3E-output.pnm". Other images for each filter will be created automatically.:
 ```
 ./Proj3A 3B_input.pnm 3E_output.pnm
 ```
 
-```
 Commands to run 3H: (All the source code has been transferred to the directory named sandbox)
 
 Different folders are stress tests, testing the source code for different edge cases.
